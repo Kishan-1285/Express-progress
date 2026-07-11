@@ -26,9 +26,15 @@ app.get('/join',(req,res)=>{
     res.status(200).sendFile('./docs/join.html',{root:__dirname})
 })
 
+app.get('/joinus',(req,res)=>{
+    res.redirect('/join');
+})
+
 app.use((req,res)=>{
     res.status(400).sendFile('./docs/notFound.html',{root:__dirname})
 })
+
+
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
