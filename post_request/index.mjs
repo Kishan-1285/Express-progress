@@ -20,7 +20,9 @@ app.get('/users',(req,res)=>{
     // const {name} = req.query;
     // const user = users.find(user=>user.name===name);
     //  res.json(user);
-    res.send(users);
+    // res.send(users);
+    console.log(req.body);
+    return res.send(req.body);
 })
 
 app.get('/devices',(req,res)=>{
