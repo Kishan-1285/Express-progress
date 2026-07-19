@@ -22,6 +22,7 @@ app.get('/users',(req,res)=>{
     //  res.json(user);
     // res.send(users);
     console.log(req.body);
+    const {body} = req;
     return res.send(req.body);
 })
 
