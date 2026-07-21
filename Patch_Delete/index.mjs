@@ -8,13 +8,13 @@ const users = [
     { id: 3, user_name: "Gokul" },
     { id: 4, user_name: "Guru" },
     { id: 5, user_name: "Sridar" },
-]
+];
 
 app.use(express.json());
 
 app.get("/api/users",(req,res)=>{
     res.status(200).send(users);
-})
+});
 
 app.get("/api/users/:id", (req, res) => {
     const id = parseInt(req.params.id);
@@ -26,7 +26,7 @@ app.get("/api/users/:id", (req, res) => {
         return res.send(user);
     }
     return res.status(404).send({ msg: "user not found" });
-})
+});
 
 app.patch("/api/users/:id",(req,res)=>{
     // console.log(req);
