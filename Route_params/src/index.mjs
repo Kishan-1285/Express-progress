@@ -18,7 +18,7 @@ app.get("/",(req,res)=>{
 
 app.get("/api/users",(req,res)=>{
     res.send(users)
-})
+});
 
 app.get("/api/users/:id",(req,res)=>{
     
@@ -35,12 +35,18 @@ app.get("/api/users/:id",(req,res)=>{
     }
 
     return res.status(404).send({msg: "User not found"});
-})
+});
 
 
 app.get('/users/:id',(req,res)=>{
-    
-})
+    const id = parseInt(req.params.id);[]
+    const user = users.find((user)=>user.id===id);
+    if(user){
+        return res.status(200).send(user);
+    }
+});
+
+
 app.listen(PORT,()=>{
     console.log(`App is running on the port ${PORT}`);
 })
