@@ -36,6 +36,11 @@ app.get("/api/users/:id",(req,res)=>{
 
     return res.status(404).send({msg: "User not found"});
 })
+
+
+app.get('/users/:id',(req,res)=>{
+    
+})
 app.listen(PORT,()=>{
     console.log(`App is running on the port ${PORT}`);
 })
