@@ -13,17 +13,17 @@ const users = [
 
 app.use(express.json());
 
-// app.get("/api/users/:id",(req,res)=>{
-//     const id = parseInt(req.params.id);
-//     if(isNaN(id)){
-//         res.status(404).send({msg:'bad request,invalid id'})
-//     }
-//     const user = users.find((user)=>user.id ===id)
-//     if(user){
-//         return res.send(user);
-//     }
-//     return res.status(404).send({msg:"user not found"});
-// })
+app.get("/api/users/:id",(req,res)=>{
+    const id = parseInt(req.params.id);
+    if(isNaN(id)){
+        res.status(404).send({msg:'bad request,invalid id'})
+    }
+    const user = users.find((user)=>user.id ===id)
+    if(user){
+        return res.send(user);
+    }
+    return res.status(404).send({msg:"user not found"});
+})
 
 app.get("/api/users",(req,res)=>{
     res.status(200).send(users);

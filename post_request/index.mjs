@@ -24,11 +24,11 @@ app.post('/users',(req,res)=>{
     const newuser = {id:users[users.length-1].id+1,...body};
     users.push(newuser);    
     return res.status(201).send(newuser);
-})
+});
 
 app.get('/users',(req,res)=>{
     res.send(users);
-})
+});
 
 const cred = [
     {id:1,username:"kishan", password:"asdf"}
@@ -64,9 +64,9 @@ app.get('/devices',(req,res)=>{
     const result = devices.filter(dev=>{
         return dev.category===category|| dev.brand===brand;
     })
-    res.json(result)
-})
+    res.json(result);
+});
 
 app.listen(3000,()=>{
     console.log("App is running on port 3000");
-})
+});
