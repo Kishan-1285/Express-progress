@@ -1,0 +1,26 @@
+[
+    {
+        "make":"honda",
+        "userID":1
+    },
+    {
+        "make":"Kia",
+        "userID":2
+    },
+    {
+        "make":"swift",
+        "userID":3
+    },
+    {
+        "make":"maruthi",
+        "userID":4
+    },
+    {
+        "make":"lambo",
+        "userID":5
+    },
+    {
+        "make":"defender",
+        "userID":6
+    }
+]
